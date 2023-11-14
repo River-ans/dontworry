@@ -12,6 +12,7 @@
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "remixicon": "^3.5.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {

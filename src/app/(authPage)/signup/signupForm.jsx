@@ -47,7 +47,7 @@ export default function SignupForm() {
           value === formValues.password ? "" : "비밀번호가 일치하지 않습니다.";
         break;
       case "nickname":
-        errors.nickname = /^[A-Za-z가-힣0-9]{2,}$/.test(value)
+        errors.nickname = /^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$/.test(value)
           ? ""
           : "닉네임은 최소 2자 이상이며, 영문, 한글, 숫자만 가능합니다.";
         break;
@@ -108,7 +108,6 @@ export default function SignupForm() {
 
   return (
     <div className={styles.authForm}>
-      <h1>회원가입</h1>
       <form className={styles.signupForm} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <input

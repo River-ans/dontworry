@@ -4,7 +4,10 @@ import SignupForm from "./signupForm";
 export default function SignUpPage() {
   return (
     <main className={styles.main}>
-      <SignupForm />
+      <div className={styles.wrapper}>
+        <h1>회원가입</h1>
+        <SignupForm />
+      </div>
     </main>
   );
 }
