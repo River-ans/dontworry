@@ -6,7 +6,7 @@ export default function SuccessModal({ onClose }) {
       <div className={styles.modalContent}>
         <h2>회원가입 성공</h2>
         <p>회원가입이 성공적으로 완료되었습니다.</p>
-        <button onClick={onClose}>홈으로 가기</button>
+        <button onClick={onClose}>로그인 하러가기</button>
       </div>
     </div>
   );

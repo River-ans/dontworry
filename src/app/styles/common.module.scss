@@ -26,7 +26,7 @@
   border-radius: var(--border-radius2);
   position: absolute;
   top: 10%;
-  animation: slideIn 3s forwards;
+  animation: slideIn 5s forwards;
 }
 
 /* 애니메이션 키 프레임 정의 */
@@ -35,9 +35,12 @@
     opacity: 0.3;
   }
 
-  60% {
+  20% {
     opacity: 1;
     transform: translate(0%, 100%);
+  }
+  80% {
+    opacity: 1;
   }
 
   100% {

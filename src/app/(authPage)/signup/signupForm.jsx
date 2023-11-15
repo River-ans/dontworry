@@ -4,10 +4,13 @@ import styles from "@/app/styles/authPage.module.scss";
 import { Msg, Spinner } from "@/app/components/common";
 import { createUser } from "@/app/apis/CreateUser";
 import SuccessModal from "./successModal";
+import { useRouter } from "next/navigation";
 
 export default function SignupForm() {
+  const router = useRouter();
+
   const [formValues, setFormValues] = useState({
-    id: "",
+    email: "",
     password: "",
     confirmPassword: "",
     nickname: "",
@@ -27,12 +30,12 @@ export default function SignupForm() {
     let errors = { ...formErrors };
 
     switch (name) {
-      case "id":
-        errors.id = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+      case "email":
+        errors.email = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
           value
         )
           ? ""
-          : "ID는 유효한 이메일 형식이어야 합니다.";
+          : "유효한 이메일 형식이어야 합니다.";
         break;
       case "password":
         errors.password =
@@ -47,7 +50,7 @@ export default function SignupForm() {
           value === formValues.password ? "" : "비밀번호가 일치하지 않습니다.";
         break;
       case "nickname":
-        errors.nickname = /^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$/.test(value)
+        errors.nickname = /^[a-zA-Z0-9가-힣]{2,16}$/.test(value)
           ? ""
           : "닉네임은 최소 2자 이상이며, 영문, 한글, 숫자만 가능합니다.";
         break;
@@ -65,7 +68,7 @@ export default function SignupForm() {
     // 폼 필드 값이 비어있지 않은지 확인
     const areFieldsFilled =
       formValues.nickname.trim() !== "" &&
-      formValues.id.trim() !== "" &&
+      formValues.email.trim() !== "" &&
       formValues.password.trim() !== "" &&
       formValues.confirmPassword.trim() !== "";
 
@@ -73,14 +76,13 @@ export default function SignupForm() {
     const isValidForm = Object.values(formErrors).every(
       (error) => error === ""
     );
-    // 3초 지연 함수
+    //  지연 함수
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     // 초 지연
     await delay(1000);
 
     if (areFieldsFilled && isValidForm) {
-      console.log("제출");
       //   여기에 폼 제출 로직 (예: API 요청) 추가
       try {
         const data = await createUser(formValues);
@@ -106,20 +108,25 @@ export default function SignupForm() {
     setIsLoading(false);
   };
 
+  const handleButtonClick = () => {
+    setShowSuccessModal(false);
+    router.push("/login");
+  };
+
   return (
     <div className={styles.authForm}>
       <form className={styles.signupForm} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <input
             type="text"
-            id="id"
-            name="id"
+            id="email"
+            name="email"
             placeholder="이메일"
             required
-            value={formValues.id}
+            value={formValues.email}
             onChange={handleChange}
           />
-          {formErrors.id && <p>{formErrors.id}</p>}
+          {formErrors.email && <p>{formErrors.email}</p>}
         </div>
         <div className={styles.formGroup}>
           <input
@@ -162,9 +169,7 @@ export default function SignupForm() {
         </button>
       </form>
       {errorMsg ? <Msg>{errorMsg}</Msg> : <></>}
-      {showSuccessModal && (
-        <SuccessModal onClose={() => setShowSuccessModal(false)} />
-      )}
+      {showSuccessModal && <SuccessModal onClose={handleButtonClick} />}
     </div>
   );
 }

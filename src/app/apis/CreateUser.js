@@ -7,12 +7,13 @@ export async function createUser(formData) {
       },
       body: JSON.stringify(formData),
     });
+    const data = await response.json();
 
-    if (!response.ok) {
+    if (response.ok) {
+      return data;
+    } else {
       throw new Error(data.message || "회원가입 실패");
     }
-    const data = await response.json();
-    return data;
   } catch (error) {
     throw error;
   }

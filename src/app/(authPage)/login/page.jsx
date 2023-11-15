@@ -1,7 +1,7 @@
 import styles from "@/app/styles/authPage.module.scss";
 import LoginForm from "./lgoinForm";
 import Link from "next/link";
-import KakaoIcon from "@/app/components/kakaoIcon";
+import KakaoLogin from "./kakaoLogin";
 
 function OrDivider() {
   return (
@@ -10,15 +10,6 @@ function OrDivider() {
       <span>OR</span>
       <div className={styles.line}></div>
     </div>
-  );
-}
-
-function KakaoLogin() {
-  return (
-    <button className={styles.KakaoBtn}>
-      <KakaoIcon />
-      <span>카카오 로그인</span>
-    </button>
   );
 }
 
