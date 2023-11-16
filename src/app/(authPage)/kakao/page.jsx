@@ -16,6 +16,7 @@ export default function KakaoRedirectHandler() {
     try {
       const response = await fetch("http://localhost:4000/auth/kakao-login", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -28,13 +29,13 @@ export default function KakaoRedirectHandler() {
         // 예: 사용자를 메인 페이지로 리다이렉트
 
         router.push("/");
-        console.log(data);
       } else {
         // 에러 처리
         console.error("서버 에러");
       }
     } catch (error) {
       console.error("통신 에러", error);
+      router.push("/login");
     }
   };
 
