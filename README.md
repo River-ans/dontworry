@@ -2,9 +2,11 @@
 
 돈 워리는 사람들이 일상생활의 다양한 선택과 고민에 대해 다른 사람들의 의견을 쉽게 얻을 수 있도록 돕는 플랫폼을 제공한다. 사용자들이 자신의 고민을 공유하고, 커뮤니티에서 투표 그리고 다양한 의견과 피드백을 통해 더 나은 결정을 내릴 수 있게 도와줄 수 있는 플랫폼이다.
 
+![데모 영상](https://www.dropbox.com/scl/fi/erk2fxzqwdydnati8il65/2023-11-30-6.52.43.mov?rlkey=a13cjufrr83ejlpbylq2jzkte&dl=0)
+
 ## **설치 방법**
 
-이 프로젝트는 **`npm`**을 사용하여 설정되었습니다.
+이 프로젝트는 `npm`을 사용하여 설정되었습니다.
 
 1. 레포지토리를 클론합니다: **`git clone [레포지토리 URL]`**
 2. 클론한 디렉토리로 이동합니다: **`cd [디렉토리 이름]`**
@@ -23,7 +25,8 @@
 
 ### **페이지 구성**
 
-app
+<pre>
+`app
 ├─ (authPage)
 │ ├─ kakao
 │ │ └─ page.jsx 카카오 리다이랙트 페이지
@@ -39,7 +42,8 @@ app
 │ │ └─ [id]
 │ │ └─ page.jsx 게시글 페이지
 │ ├─ layout.jsx
-│ └─ page.jsx 메인 페이지
+│ └─ page.jsx 메인 페이지`
+</pre>
 
 ### **Roadmap or Future Improvements**
 
