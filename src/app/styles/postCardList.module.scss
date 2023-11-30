@@ -18,7 +18,8 @@
 .postContainer {
   /* 스타일 정의 */
   width: 100%;
-  border: 1px solid var(--background-input);
+
+  border: 2px solid var(--background-input);
   border-radius: var(--border-radius2);
   padding: 15px 10px;
 }
@@ -28,7 +29,7 @@
   display: flex;
   font-weight: 300;
   font-size: 12px;
-  opacity: 0.5;
+  opacity: 0.7;
   gap: 5px;
 }
 

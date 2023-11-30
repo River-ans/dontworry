@@ -30,7 +30,7 @@ export default function PostPollList() {
       {data.pollOptions.map((optionObj, index) => {
         const optionVotes = optionObj.voters.length;
         const votePercentage =
-          totalVotes > 0 ? (optionVotes / totalVotes) * 100 : 0;
+          totalVotes > 0 ? Math.round((optionVotes / totalVotes) * 100) : 0;
         return (
           <div
             key={index}
