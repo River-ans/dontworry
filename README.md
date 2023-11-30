@@ -2,7 +2,7 @@
 
 돈 워리는 사람들이 일상생활의 다양한 선택과 고민에 대해 다른 사람들의 의견을 쉽게 얻을 수 있도록 돕는 플랫폼을 제공한다. 사용자들이 자신의 고민을 공유하고, 커뮤니티에서 투표 그리고 다양한 의견과 피드백을 통해 더 나은 결정을 내릴 수 있게 도와줄 수 있는 플랫폼이다.
 
-![데모 영상](https://www.dropbox.com/scl/fi/erk2fxzqwdydnati8il65/2023-11-30-6.52.43.mov?rlkey=a13cjufrr83ejlpbylq2jzkte&dl=0)
+[데모 영상](https://www.dropbox.com/scl/fi/erk2fxzqwdydnati8il65/2023-11-30-6.52.43.mov?rlkey=a13cjufrr83ejlpbylq2jzkte&dl=0)
 
 ## **설치 방법**
 
