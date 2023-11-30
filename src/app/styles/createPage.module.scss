@@ -1,0 +1,169 @@
+.wrapper {
+  padding: var(--background-padding);
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+
+  .backIcon {
+    width: fit-content;
+    padding: 10px 0px;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  .cateBtn {
+    cursor: pointer;
+    margin-top: 20px;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 12px;
+    padding-right: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.594);
+    border-radius: var(--border-radius2);
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}
+
+.creatPostFrom {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .postSection {
+    border: none;
+    .title,
+    .content {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .title {
+      font-size: 20px;
+      padding: 20px 0px;
+      font-weight: 600;
+    }
+    .content {
+      font-size: 14px;
+      resize: none;
+    }
+  }
+  .pollSection {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    legend {
+      margin-bottom: 20px;
+    }
+
+    .pollInput,
+    .pollBtn {
+      background: transparent;
+      padding: 12px 20px;
+      border-radius: var(--border-radius2);
+      font-size: 14px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .pollInput {
+      border: 1px solid rgba(146, 146, 146, 0.437);
+    }
+    .pollBtn {
+      display: flex;
+      border: 1px dashed rgba(146, 146, 146, 0.437);
+      color: rgba(146, 146, 146, 0.437);
+      cursor: pointer;
+    }
+    .pollItem {
+      display: flex;
+      position: relative;
+      input {
+        width: 100%;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        color: rgb(163, 163, 163);
+        opacity: 0.5;
+        padding: 10px 15px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover {
+          opacity: 1;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .submitBtn {
+    width: 100%;
+    max-width: var(--max-width);
+    box-shadow: var(--background-shadow);
+    background-color: var(--point-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius2);
+    padding: 12px;
+    margin-top: auto;
+  }
+}
+
+// 카테고리 모달
+.cateModalBackdrop {
+  z-index: 2;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.434);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cateModal {
+  margin: 10px;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius1);
+  padding: 25px var(--background-padding);
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    button {
+      cursor: pointer;
+      padding: 7px 15px;
+      border: 1px solid rgba(141, 141, 141, 0.217);
+      border-radius: var(--border-radius2);
+      background-color: transparent;
+    }
+  }
+}

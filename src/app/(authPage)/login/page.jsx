@@ -1,7 +1,7 @@
 import styles from "@/app/styles/authPage.module.scss";
-import LoginForm from "./lgoinForm";
+import LoginForm from "../../components/loginPage/lgoinForm";
 import Link from "next/link";
-import KakaoLogin from "./kakaoLogin";
+import KakaoLogin from "../../components/loginPage/kakaoLogin";
 
 function OrDivider() {
   return (

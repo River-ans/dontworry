@@ -34,3 +34,50 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```
+dontworry
+├─ .next
+├─ public
+│  ├─ next.svg
+│  └─ vercel.svg
+├─ src
+│  └─ app
+│     ├─ (authPage)
+│     │  ├─ kakao
+│     │  │  └─ page.jsx
+│     │  ├─ login
+│     │  │  ├─ kakaoLogin.jsx
+│     │  │  ├─ lgoinForm.jsx
+│     │  │  └─ page.jsx
+│     │  ├─ signup
+│     │  │  ├─ page.jsx
+│     │  │  ├─ signupForm.jsx
+│     │  │  └─ successModal.jsx
+│     │  └─ layout.jsx
+│     ├─ (mianPage)
+│     │  ├─ layout.jsx
+│     │  ├─ page.jsx
+│     │  └─ userInfo.jsx
+│     ├─ apis
+│     │  ├─ CreateUser.js
+│     │  ├─ login.js
+│     │  └─ userApi.js
+│     ├─ components
+│     │  ├─ common.jsx
+│     │  └─ kakaoIcon.jsx
+│     ├─ img
+│     ├─ styles
+│     │  ├─ authPage.module.scss
+│     │  └─ common.module.scss
+│     ├─ favicon.ico
+│     ├─ globals.css
+│     ├─ layout.jsx
+│     └─ queryProviders.jsx
+├─ .eslintrc.json
+├─ .gitignore
+├─ jsconfig.json
+├─ next.config.js
+├─ package-lock.json
+└─ package.json
+```

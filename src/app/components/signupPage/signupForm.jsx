@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "@/app/styles/authPage.module.scss";
 import { Msg, Spinner } from "@/app/components/common";
-import { createUser } from "@/app/apis/CreateUser";
+import { createUser } from "@/app/apis/createUser";
 import SuccessModal from "./successModal";
 import { useRouter } from "next/navigation";
 
@@ -22,9 +22,17 @@ export default function SignupForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormValues({ ...formValues, [name]: value });
+    setFormValues((prev) => {
+      return { ...prev, [name]: value };
+    });
+
     validate(name, value);
   };
+
+  //추가로 비밀번호 검사시 컴펌 비밀번호 재검사
+  useEffect(() => {
+    validate("confirmPassword", formValues.confirmPassword);
+  }, [formValues.password]);
 
   const validate = (name, value) => {
     let errors = { ...formErrors };

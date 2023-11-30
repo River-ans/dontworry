@@ -9,16 +9,18 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
+  --select-color: rgb(70, 244, 111);
+  --select-color-deep: rgb(46, 184, 79);
   --point-color: #25304d;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --background-color: rgb(255, 255, 255);
   --background-inverted-color: rgb(28, 27, 27);
+  --category-color: rgb(49, 168, 192);
+  --background-shadow: 0px 0px 30px rgba(20, 19, 19, 0.2);
 
-  --background-shadow: 0px 5px 30px rgba(20, 19, 19, 0.217);
-
-  --background-input: #e3e3e3;
+  --background-input: #ebebeb;
 
   --font-color: black;
   --font-inverted-color: white;
@@ -56,6 +58,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --select-color: rgba(64, 209, 97, 0.825);
+    --select-color-deep: rgb(44, 245, 90);
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -63,10 +67,8 @@
     --background-inverted-color: rgb(255, 255, 255);
     --background-layout: rgb(33, 32, 32);
 
-    --background-shadow: 0px 5px 30px rgb(20, 19, 19);
-
-    --background-input: rgb(40, 40, 40);
-
+    --background-input: rgb(45, 45, 45);
+    --category-color: rgb(0, 208, 255);
     --font-color: white;
     --font-inverted-color: black;
 

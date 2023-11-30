@@ -1,5 +1,5 @@
 import styles from "@/app/styles/authPage.module.scss";
-import SignupForm from "./signupForm";
+import SignupForm from "../../components/signupPage/signupForm";
 
 export default function SignUpPage() {
   return (

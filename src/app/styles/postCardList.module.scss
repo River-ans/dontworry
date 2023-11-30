@@ -1,0 +1,70 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--background-padding);
+  margin-top: 50px;
+}
+
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.postContainer {
+  /* 스타일 정의 */
+  width: 100%;
+  border: 1px solid var(--background-input);
+  border-radius: var(--border-radius2);
+  padding: 15px 10px;
+}
+
+.postHeader {
+  /* 스타일 정의 */
+  display: flex;
+  font-weight: 300;
+  font-size: 12px;
+  opacity: 0.5;
+  gap: 5px;
+}
+
+.postTitle {
+  /* 스타일 정의 */
+  font-size: 16px;
+  margin: 12px 0px;
+}
+
+.postContent {
+  /* 스타일 정의 */
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postCategory {
+  /* 스타일 정의 */
+  font-size: 10px;
+  padding: 5px 10px;
+  border: 1px solid var(--category-color);
+  color: var(--category-color);
+  border-radius: var(--border-radius2);
+  display: flex;
+  width: fit-content;
+  margin: 10px 0px;
+}
+
+.postVotes {
+  /* 스타일 정의 */
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 300;
+}

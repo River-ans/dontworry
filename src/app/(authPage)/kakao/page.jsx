@@ -34,7 +34,7 @@ export default function KakaoRedirectHandler() {
         console.error("서버 에러");
       }
     } catch (error) {
-      console.error("통신 에러", error);
+      alert(error.message);
       router.push("/login");
     }
   };

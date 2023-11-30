@@ -1,7 +1,9 @@
 "use client";
 import { login } from "@/app/apis/login";
+import { fetchUserInfo } from "@/app/apis/userApi";
 import { Msg } from "@/app/components/common";
 import styles from "@/app/styles/authPage.module.scss";
+import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -9,6 +11,13 @@ export default function LoginForm() {
   const [userData, setUserData] = useState({ email: "", password: "" });
   const [errorMsg, setErrorMsg] = useState(null);
   const router = useRouter();
+  const { refetch } = useQuery({
+    queryKey: ["userInfo"],
+    queryFn: fetchUserInfo,
+    enabled: false,
+    retry: false,
+    staleTime: Infinity,
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -23,6 +32,7 @@ export default function LoginForm() {
       const data = await login(userData);
       //성공 시 실행되는 코드
       router.push("/");
+      refetch();
     } catch (error) {
       console.log(error.message);
       // 실패 시 실행되는 코드

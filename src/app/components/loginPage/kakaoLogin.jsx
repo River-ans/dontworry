@@ -1,5 +1,5 @@
 "use client";
-import KakaoIcon from "@/app/components/kakaoIcon";
+import { KakaoIcon } from "@/app/components/common";
 import styles from "@/app/styles/authPage.module.scss";
 
 export default function KakaoLogin() {
