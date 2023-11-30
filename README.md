@@ -1,83 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Don't worry**
 
-## Getting Started
+돈 워리는 사람들이 일상생활의 다양한 선택과 고민에 대해 다른 사람들의 의견을 쉽게 얻을 수 있도록 돕는 플랫폼을 제공한다. 사용자들이 자신의 고민을 공유하고, 커뮤니티에서 투표 그리고 다양한 의견과 피드백을 통해 더 나은 결정을 내릴 수 있게 도와줄 수 있는 플랫폼이다.
 
-First, run the development server:
+## **설치 방법**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+이 프로젝트는 **`npm`**을 사용하여 설정되었습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. 레포지토리를 클론합니다: **`git clone [레포지토리 URL]`**
+2. 클론한 디렉토리로 이동합니다: **`cd [디렉토리 이름]`**
+3. 필요한 패키지를 설치합니다: **`npm install`**
+4. 로컬에서 프로젝트를 실행합니다: **`npm run start`**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## **프로젝트 문서**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### **사용 기술 스택**
 
-## Learn More
+- Next.js 14
+- react 18
+- tanstack/react-query
+- recoil
+- sass
 
-To learn more about Next.js, take a look at the following resources:
+### **페이지 구성**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+app
+├─ (authPage)
+│ ├─ kakao
+│ │ └─ page.jsx 카카오 리다이랙트 페이지
+│ ├─ login
+│ │ └─ page.jsx 로그인 페이지
+│ ├─ signup
+│ │ └─ page.jsx 회원가입 페이지
+│ └─ layout.jsx
+├─ (mianPage)
+│ ├─ createpost
+│ │ └─ page.jsx 게시글 작성 페이지
+│ ├─ posts
+│ │ └─ [id]
+│ │ └─ page.jsx 게시글 페이지
+│ ├─ layout.jsx
+│ └─ page.jsx 메인 페이지
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **Roadmap or Future Improvements**
 
-## Deploy on Vercel
+1. **성능 최적화**: 현재 버전에서는 성능 최적화에 크게 집중하지 못했습니다. 향후, 렌더링 성능 개선 및 효율적인 데이터 로딩 방식을 구현할 예정입니다.
+2. **댓글 기능 추가**: 사용자 간의 상호작용을 높이기 위해 댓글 기능을 추가할 계획입니다.
+3. **게시글 카테고리 기능**: 사용자가 게시글을 카테고리별로 분류하고 찾을 수 있도록 하는 기능을 개발할 예정입니다.
+4. **UI/UX 개선**: 사용자 경험을 개선하기 위해 디자인 및 사용성 개선에 집중할 것입니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **정보**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [프로젝트 노션 링크](https://elfin-tank-a25.notion.site/don-t-worry-8206351f14ad4263a105c0372320b6d6)
+  - 기획 배경
+  - 와이어프레임
 
-```
-dontworry
-├─ .next
-├─ public
-│  ├─ next.svg
-│  └─ vercel.svg
-├─ src
-│  └─ app
-│     ├─ (authPage)
-│     │  ├─ kakao
-│     │  │  └─ page.jsx
-│     │  ├─ login
-│     │  │  ├─ kakaoLogin.jsx
-│     │  │  ├─ lgoinForm.jsx
-│     │  │  └─ page.jsx
-│     │  ├─ signup
-│     │  │  ├─ page.jsx
-│     │  │  ├─ signupForm.jsx
-│     │  │  └─ successModal.jsx
-│     │  └─ layout.jsx
-│     ├─ (mianPage)
-│     │  ├─ layout.jsx
-│     │  ├─ page.jsx
-│     │  └─ userInfo.jsx
-│     ├─ apis
-│     │  ├─ CreateUser.js
-│     │  ├─ login.js
-│     │  └─ userApi.js
-│     ├─ components
-│     │  ├─ common.jsx
-│     │  └─ kakaoIcon.jsx
-│     ├─ img
-│     ├─ styles
-│     │  ├─ authPage.module.scss
-│     │  └─ common.module.scss
-│     ├─ favicon.ico
-│     ├─ globals.css
-│     ├─ layout.jsx
-│     └─ queryProviders.jsx
-├─ .eslintrc.json
-├─ .gitignore
-├─ jsconfig.json
-├─ next.config.js
-├─ package-lock.json
-└─ package.json
-```
+## **작성자**
+
+- [문은용](https://velog.io/@river-m)
